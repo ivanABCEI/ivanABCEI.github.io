@@ -12,10 +12,8 @@
   }
   
   .container {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    width: 1920px; /* Initial width */
+    height: 1080px; /* Initial height */
     background-image: url('https://github.com/ivanABCEI/ivanABCEI.github.io/blob/main/3398659.jpg?raw=true');
     background-size: contain; /* Ensure entire image fits within the container */
     background-position: center; /* Center the background image */
@@ -38,11 +36,11 @@ window.addEventListener('load', function() {
     var aspectRatio = image.width / image.height;
     var containerAspectRatio = container.offsetWidth / container.offsetHeight;
     if (aspectRatio > containerAspectRatio) {
-      container.style.width = '100%';
-      container.style.height = 'auto';
+      container.style.width = container.offsetWidth + 'px';
+      container.style.height = (container.offsetWidth / aspectRatio) + 'px';
     } else {
-      container.style.width = 'auto';
-      container.style.height = '100%';
+      container.style.height = container.offsetHeight + 'px';
+      container.style.width = (container.offsetHeight * aspectRatio) + 'px';
     }
   };
 });
@@ -50,3 +48,4 @@ window.addEventListener('load', function() {
 
 </body>
 </html>
+
