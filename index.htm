@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Image from GitHub Repository</title>
 <style>
-body {
-  background-image: url('3398659.jpg');
-}
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f0f0f0; /* Fallback color if the image is unavailable */
+  }
+  
+  .container {
+    width: 1920px; /* Width of the image */
+    height: 1080px; /* Height of the image */
+    background-image: url('https://github.com/ivanABCEI/ivanABCEI.github.io/blob/main/3398659.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+  }
 </style>
 </head>
 <body>
+
+<div class="container">
+  <!-- Content goes here -->
+</div>
 
 </body>
 </html>
