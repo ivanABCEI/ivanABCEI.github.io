@@ -1,0 +1,11 @@
+# Site settings
+title: Space Fashion
+description: bruh
+baseurl: "" # the subpath of your site, e.g. /blog, if your site is hosted at example.com/blog
+url: "https://espacio.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
