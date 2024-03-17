@@ -12,8 +12,10 @@
   }
   
   .container {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     background-image: url('https://github.com/ivanABCEI/ivanABCEI.github.io/blob/main/3398659.jpg?raw=true');
     background-size: contain; /* Ensure entire image fits within the container */
     background-position: center; /* Center the background image */
@@ -23,10 +25,28 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" id="imageContainer">
   <!-- Content goes here -->
 </div>
 
+<script>
+window.addEventListener('load', function() {
+  var container = document.getElementById('imageContainer');
+  var image = new Image();
+  image.src = 'https://github.com/ivanABCEI/ivanABCEI.github.io/blob/main/3398659.jpg?raw=true';
+  image.onload = function() {
+    var aspectRatio = image.width / image.height;
+    var containerAspectRatio = container.offsetWidth / container.offsetHeight;
+    if (aspectRatio > containerAspectRatio) {
+      container.style.width = '100%';
+      container.style.height = 'auto';
+    } else {
+      container.style.width = 'auto';
+      container.style.height = '100%';
+    }
+  };
+});
+</script>
+
 </body>
 </html>
-
