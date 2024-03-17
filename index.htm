@@ -29,25 +29,6 @@
   <!-- Content goes here -->
 </div>
 
-<script>
-window.addEventListener('load', function() {
-  var container = document.getElementById('imageContainer');
-  var image = new Image();
-  image.src = 'https://github.com/ivanABCEI/ivanABCEI.github.io/blob/main/3398659.jpg?raw=true';
-  image.onload = function() {
-    var aspectRatio = image.width / image.height;
-    var containerAspectRatio = container.offsetWidth / container.offsetHeight;
-    if (aspectRatio > containerAspectRatio) {
-      container.style.width = container.offsetWidth + 'px';
-      container.style.height = (container.offsetWidth / aspectRatio) + 'px';
-    } else {
-      container.style.height = container.offsetHeight + 'px';
-      container.style.width = (container.offsetHeight * aspectRatio) + 'px';
-    }
-  };
-});
-</script>
-
 </body>
 </html>
 
